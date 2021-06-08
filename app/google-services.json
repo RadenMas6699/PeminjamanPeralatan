@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "57285928741",
+    "project_id": "sajrahapppeminjamanalatlab",
+    "storage_bucket": "sajrahapppeminjamanalatlab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57285928741:android:c6881750f34a7107ebdccc",
+        "android_client_info": {
+          "package_name": "com.radenmas.peminjamanperalatan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57285928741-k8ak3dtrqsasj2eb9p1n6f1gaist44is.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.radenmas.peminjamanperalatan",
+            "certificate_hash": "15086f01d893fa1ba40e40acc572e91e3cbcc14c"
+          }
+        },
+        {
+          "client_id": "57285928741-21c80lbhgl1li1oj5vb3q2ifm9iste2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi_0waFgTdfmm5uWF3gyss7otW6bTAQh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57285928741-21c80lbhgl1li1oj5vb3q2ifm9iste2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

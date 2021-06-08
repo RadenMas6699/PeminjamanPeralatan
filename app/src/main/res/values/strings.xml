@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Peminjaman Peralatan</string>
+    <string name="name_developer">Sajerah Yunus</string>
+    <string name="nim_developer">1724042010</string>
+    <string name="email_developer">sajerahyunus14@gmail.com</string>
+    <string name="app_version">versi 1.0</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="no_have_account">Belum punya akun?</string>
+    <string name="have_account">Sudah punya akun?</string>
+    <string name="register">Daftar</string>
+    <string name="name">Nama</string>
+    <string name="class_group">Kelas</string>
+    <string name="kelompok">Kelompok</string>
+    <string name="home">Home</string>
+    <string name="history">Riwayat</string>
+    <string name="account">Akun</string>
+    <string name="info">Info</string>
+
+    <string name="jumlah">Jumlah</string>
+    <string name="save">Simpan</string>
+    <string name="bio_mhs">Biodata Mahasiswa</string>
+    <string name="lab">Laboratorium</string>
+    <string name="data_peminjam">Data Peminjam</string>
+    <string name="detail">Detail</string>
+    <string name="delete">Hapus</string>
+    <string name="nomor_hp">Nomor HP</string>
+
+    <string name="lab_mesin">Mesin</string>
+    <string name="lab_instalasi">Instalasi</string>
+    <string name="lab_instrumentasi">Instrumentasi</string>
+    <string name="hai_user">Hai, Raden</string>
+    <string name="add">Tambah</string>
+    <string name="profil">Profil</string>
+    <string name="nim">NIM</string>
+    <string name="email">Email</string>
+    <string name="phone">Handphone</string>
+    <string name="logout">Log out</string>
+    <string name="mengawas">Mengawas</string>
+    <string name="hello_app">Selamat datang di Aplikasi Peminjaman Peralatan</string>
+    <string name="alat_yang_dipinjam">Alat yang dipinjam</string>
+    <string name="graduation">Pendidikan Teknik Elektro
+    \nJurusan Pendidikan Teknik Elektro
+    \nFakultas Teknik
+    \nUniversitas Negeri Makassar</string>
+    <string name="pte">Program Studi Pendidikan Teknik Elektro</string>
+    <string name="jpte">Jurusan Pendidikan Teknik Elektro</string>
+    <string name="teknik">Fakultas Teknik</string>
+    <string name="unm">Universitas Negeri Makassar</string>
+    <string name="asisten_lab">Asisten Lab</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="status">Status</string>
+    <string name="data_mahasiswa">Data Mahasiswa</string>
+    <string name="tambah_kelas">+ Tambah Kelas</string>
+    <string name="detail_alat">Detail Alat</string>
+    <string name="nama_alat">Nama Alat</string>
+    <string name="jumlah_alat">Jumlah alat</string>
+    <string name="simpan_gambar">Simpan gambar</string>
+    <string name="pilih_kelas">Pilih Kelas</string>
+    <string name="profil_developer">Profil Pembuat</string>
+    <string name="tambah_asisten_lab">Tambah Asisten Lab</string>
+    <string name="pengembalian">Pengembalian</string>
+
+
+</resources>

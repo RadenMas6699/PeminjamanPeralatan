@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_round_top_history"
+        android:paddingHorizontal="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="#E6E6E6"
+            app:cardBackgroundColor="#E6E6E6"
+            app:cardCornerRadius="3dp" />
+
+        <ImageView
+            android:id="@+id/cancel_add_tool"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_clear" />
+
+        <TextView
+            android:id="@+id/titleTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:gravity="center_horizontal"
+            android:text="Tambah Alat"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_add_tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTool"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center"
+            android:hint="Masukkan Nama Alat"
+            android:inputType="text"
+            android:paddingVertical="14dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/semi_black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/linearJml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_add_tool"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_jml_tool"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="0.7"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Jumlah Alat"
+                android:inputType="number"
+                android:paddingVertical="14dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/semi_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:text="Buah"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_tool"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/linearJml"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/blue_600"
+            android:gravity="center"
+            android:text="Tambah"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp" />
+    </RelativeLayout>
+
+</ScrollView>

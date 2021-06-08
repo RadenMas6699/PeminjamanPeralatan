@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_600"
+    tools:context=".About">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:onClick="Back"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/white_smoke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/profil_developer"
+                android:textColor="@color/white_smoke"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@id/toolbar_about"-->
+    <!--        android:background="@drawable/bg_about" />-->
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/card1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/toolbar_about"-->
+    <!--        android:layout_marginHorizontal="16dp"-->
+    <!--        android:layout_marginVertical="16dp"-->
+    <!--        app:cardBackgroundColor="@color/white"-->
+    <!--        app:cardCornerRadius="12dp"-->
+    <!--        app:cardElevation="2dp">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginHorizontal="16dp"-->
+    <!--            android:layout_marginVertical="28dp">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/img_about"-->
+    <!--                android:layout_width="100dp"-->
+    <!--                android:layout_height="100dp"-->
+    <!--                android:layout_gravity="center_horizontal"-->
+    <!--                android:src="@drawable/ic_sajerah" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/name_about"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="16dp"-->
+    <!--                android:layout_marginTop="3dp"-->
+    <!--                android:layout_toEndOf="@id/img_about"-->
+    <!--                android:lines="1"-->
+    <!--                android:text="@string/name_developer"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="18sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/nim_about"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/name_about"-->
+    <!--                android:layout_marginStart="16dp"-->
+    <!--                android:layout_marginTop="12dp"-->
+    <!--                android:layout_toEndOf="@id/img_about"-->
+    <!--                android:drawablePadding="8dp"-->
+    <!--                android:lines="1"-->
+    <!--                android:text="@string/nim_developer"-->
+    <!--                android:textSize="15sp"-->
+    <!--                app:drawableStartCompat="@drawable/ic_nim_card_fill"-->
+    <!--                app:drawableTint="?attr/colorControlNormal" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/email_about"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/nim_about"-->
+    <!--                android:layout_marginStart="16dp"-->
+    <!--                android:layout_marginTop="4dp"-->
+    <!--                android:layout_toEndOf="@id/img_about"-->
+    <!--                android:drawablePadding="8dp"-->
+    <!--                android:lines="1"-->
+    <!--                android:text="@string/email_developer"-->
+    <!--                android:textSize="15sp"-->
+    <!--                app:drawableStartCompat="@drawable/ic_mail_fill"-->
+    <!--                app:drawableTint="?attr/colorControlNormal" />-->
+    <!--        </RelativeLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/card1"-->
+    <!--        android:layout_marginHorizontal="16dp"-->
+    <!--        android:elevation="2dp"-->
+    <!--        app:cardBackgroundColor="@color/white"-->
+    <!--        app:cardCornerRadius="8dp">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginHorizontal="16dp"-->
+    <!--            android:layout_marginVertical="24dp">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/pendidikan_about"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginBottom="8dp"-->
+    <!--                android:text="Pendidikan"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="16sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="42dp"-->
+    <!--                android:layout_height="42dp"-->
+    <!--                android:layout_below="@id/pendidikan_about"-->
+    <!--                android:src="@drawable/graduation" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/pendidikan_about"-->
+    <!--                android:layout_marginStart="56dp"-->
+    <!--                android:text="@string/graduation"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </RelativeLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_about"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_about">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="38dp"
+                android:src="@drawable/ic_sajerah" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_horizontal"
+                android:text="@string/name_developer"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="@string/nim_developer"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="@string/email_developer"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center_horizontal"
+                android:text="@string/pte"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/jpte"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/teknik"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/unm"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

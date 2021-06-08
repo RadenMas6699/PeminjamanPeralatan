@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_round_top_history"
+        android:paddingHorizontal="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="#E6E6E6"
+            app:cardBackgroundColor="#E6E6E6"
+            app:cardCornerRadius="3dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center_horizontal"
+            android:text="@string/detail_alat"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_img"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="72dp"
+            android:background="@color/gray"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp">
+
+            <ImageView
+                android:id="@+id/img_qr_code_detail"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:background="@drawable/bg_button"
+                android:scaleType="fitXY" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_img"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/nama_alat"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_tool_detail"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="38dp"
+            android:text="@string/jumlah_alat"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/name_tool_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_img"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/jml_tool_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_tool_detail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jml_tool_detail"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="36dp"
+            android:minHeight="56dp"
+            android:text="@string/simpan_gambar"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/blue_600"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_download"
+            app:iconGravity="textStart" />
+    </RelativeLayout>
+
+</ScrollView>

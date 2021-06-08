@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_round_top_history"
+        android:paddingHorizontal="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="#E6E6E6"
+            app:cardBackgroundColor="#E6E6E6"
+            app:cardCornerRadius="3dp" />
+
+        <LinearLayout
+            android:id="@+id/linearInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="42dp"
+                android:text="Tambah Asisten Lab"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name_asisten_lab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/semi_black"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email_asisten_lab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/username"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/semi_black"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone_asisten_lab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/phone"
+                android:inputType="number"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/semi_black"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password_asisten_lab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/semi_black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTambahAsistenLab"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/linearInput"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/blue_600"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp" />
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_600"
+    tools:context=".admin.AdminAccount">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_adm_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:onClick="Back"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/white_smoke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/profil"
+                android:textColor="@color/white_smoke"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_adm_account"
+        android:background="@drawable/bg_round_top">
+
+        <ImageView
+            android:id="@+id/img_admin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_user_circle_black" />
+
+        <ImageView
+            android:id="@+id/change_profil_admin"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignEnd="@id/img_admin"
+            android:layout_alignBottom="@id/img_admin"
+            android:background="@drawable/bg_corner_36"
+            android:padding="8dp"
+            android:src="@drawable/ic_camera"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_admin"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_user_fill"
+                    app:tint="@color/blue_600" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:id="@+id/name_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_mail_fill"
+                    app:tint="@color/blue_600" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:text="@string/email" />
+
+                <TextView
+                    android:id="@+id/email_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_phone"
+                    app:tint="@color/blue_600" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:text="@string/phone" />
+
+                <TextView
+                    android:id="@+id/phone_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:minHeight="56dp"
+                android:text="@string/logout"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_red_light"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="24dp"
+                app:strokeColor="@android:color/holo_red_light"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

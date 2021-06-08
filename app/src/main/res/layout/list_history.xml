@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/linearBtnAdd"
+        android:layout_toEndOf="@id/tv_number"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/tv_number"
+        android:textColor="@color/semi_black" />
+
+    <TextView
+        android:id="@+id/tv_lab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_jumlah"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/tv_number"
+        android:textColor="@color/semi_black" />
+
+    <ImageView
+        android:id="@+id/img_check"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignTop="@id/tv_name"
+        android:layout_alignBottom="@id/tv_lab"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/img_scan"
+        android:src="@drawable/ic_check_circle"
+        android:visibility="invisible"
+        app:tint="@color/green_A700" />
+
+    <LinearLayout
+        android:id="@+id/linearBtnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_name"
+        android:layout_alignBottom="@id/tv_lab"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/img_scan"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/img_min"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_min_circle_line" />
+
+        <EditText
+            android:id="@+id/et_jml"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/img_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add_circle_line" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_scan"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_name"
+        android:layout_alignBottom="@id/tv_lab"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="6dp"
+        android:src="@drawable/ic_qr_scan_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_lab"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+</RelativeLayout>

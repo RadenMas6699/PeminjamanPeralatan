@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminMainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_round_bottom" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_admin"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="6dp"
+                android:onClick="Account"
+                android:src="@drawable/ic_user_circle_white" />
+
+            <ImageView
+                android:id="@+id/img_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:onClick="AboutApp"
+                android:src="@drawable/ic_information_line"
+                app:tint="@color/white_smoke" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/title_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_admin"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:lines="1"
+        android:textColor="@color/white_smoke"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/desc_admin"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_admin"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="26dp"
+        android:lines="2"
+        android:text="@string/hello_app"
+        android:textColor="@color/white_smoke"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_admin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/mengawas"
+        android:textColor="@color/white_smoke"
+        android:textStyle="bold" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_admin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="37dp" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_img_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        app:shimmer_auto_start="true"
+        app:shimmer_highlight_color="@color/black"
+        app:shimmer_shape="linear">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="6dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="28dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="10dp" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/desc_admin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_asisten_lab"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="AsistenLab"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_menu_asisten_lab" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_menu"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/asisten_lab"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_asisten_lab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_kelas_mhs"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="KelasMhs"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_menu_kelas" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_menu"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/class_group"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_jml_kelas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_bio_mhs"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/blue_700"
+                    android:onClick="BioMhs"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_menu_bio_mhs" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_menu"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/bio_mhs"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_jml_bio_mhs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_lab"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="Lab"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_menu_lab" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_menu"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/lab"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_jml_lab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="3 Laboratorium"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_data_pinjam"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="DataPinjam"
+                    app:cardCornerRadius="16dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_menu_bio_mhs" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_menu"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/data_peminjam"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_jml_pinjam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_menu_admin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="44dp"
+                android:layout_marginTop="4dp"
+                app:shimmer_auto_start="true"
+                app:shimmer_shape="linear">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="110dp"
+                        app:cardBackgroundColor="@color/gray"
+                        app:cardCornerRadius="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="140dp"
+                        app:cardBackgroundColor="@color/gray"
+                        app:cardCornerRadius="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="140dp"
+                        app:cardBackgroundColor="@color/gray"
+                        app:cardCornerRadius="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="140dp"
+                        app:cardBackgroundColor="@color/gray"
+                        app:cardCornerRadius="8dp" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

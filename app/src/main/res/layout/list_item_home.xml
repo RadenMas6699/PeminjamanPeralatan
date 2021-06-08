@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="24dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="24dp">
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_number"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/tv_number"
+        android:textColor="@color/semi_black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_alat"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_button"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_600"
+        android:textSize="12sp"
+        tools:ignore="RelativeOverlap" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_jumlah"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+</RelativeLayout>

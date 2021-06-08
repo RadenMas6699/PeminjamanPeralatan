@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.FragHomeUser">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="-16dp"
+        android:background="@drawable/bg_menu_user" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img1"
+        android:background="@color/blue_600" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img1"
+        android:layout_marginEnd="-6dp"
+        android:background="@drawable/bg_menu_user2" />
+
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_user_circle_white" />
+
+    <TextView
+        android:id="@+id/name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_toStartOf="@id/img_user"
+        android:lines="1"
+        android:textColor="@color/white_smoke"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_user"
+        android:layout_marginStart="32sp"
+        android:text="@string/welcome"
+        android:textColor="@color/white_smoke"
+        android:textSize="14sp" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        app:shimmer_auto_start="true"
+        app:shimmer_shape="linear">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="9dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="28dp" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_user"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp">
+
+        <ImageView
+            android:id="@+id/img_admin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_user_circle_white" />
+
+        <TextView
+            android:id="@+id/pengawas"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/asisten_lab"
+            android:textColor="@color/white_smoke" />
+
+        <TextView
+            android:id="@+id/nameAdmin"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pengawas"
+            android:layout_marginStart="48dp"
+            android:textColor="@color/white_smoke"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_user"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        app:shimmer_auto_start="true"
+        app:shimmer_shape="linear">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="20dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="8dp" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rg_lab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_mesin"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/lab_mesin"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb_instalasi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/lab_instalasi"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb_instrumentasi"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/lab_instrumentasi"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/content_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rg_lab"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="6dp" />
+
+</RelativeLayout>

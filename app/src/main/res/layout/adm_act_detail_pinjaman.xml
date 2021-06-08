@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_600"
+    tools:context=".admin.AdminDetailPinjaman">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDetailPinjaman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:onClick="Back"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/white_smoke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/data_peminjam"
+                android:textColor="@color/white_smoke"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dataPeminjam"
+        android:background="@drawable/bg_round_top_history" />
+
+    <LinearLayout
+        android:id="@+id/dataPeminjam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarDetailPinjaman"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Nama Peminjam"
+                android:textColor="@color/white_smoke" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/name"
+                android:gravity="end"
+                android:lines="1"
+                android:textColor="@color/white_smoke"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/nim"
+                android:textColor="@color/white_smoke" />
+
+            <TextView
+                android:id="@+id/tv_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/nim"
+                android:gravity="end"
+                android:lines="1"
+                android:textColor="@color/white_smoke"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/class_group"
+                android:textColor="@color/white_smoke" />
+
+            <TextView
+                android:id="@+id/tv_kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/kelas"
+                android:gravity="end"
+                android:lines="1"
+                android:textColor="@color/white_smoke"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/kelompok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/kelompok"
+                android:textColor="@color/white_smoke" />
+
+            <TextView
+                android:id="@+id/tv_kelompok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/kelompok"
+                android:gravity="end"
+                android:lines="1"
+                android:textColor="@color/white_smoke"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataPeminjam"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/alat_yang_dipinjam"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataPeminjam"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="63dp"
+        android:text="@string/status" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_alat_peminjam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dataPeminjam"
+        android:layout_marginTop="52dp"
+        tools:listitem="@layout/list_history" />
+
+</RelativeLayout>

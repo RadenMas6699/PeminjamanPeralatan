@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_600"
+    tools:context=".admin.AdminDataPeminjam">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDataPeminjam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:onClick="Back"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/white_smoke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/data_peminjam"
+                android:textColor="@color/white_smoke"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarDataPeminjam"
+        android:background="@drawable/bg_round_top_history" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/empty_box" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDataPeminjam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarDataPeminjam"
+        android:layout_marginTop="24dp"
+        tools:listitem="@layout/list_user" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_data_peminjam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarDataPeminjam"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="34dp"
+        app:shimmer_auto_start="true"
+        app:shimmer_shape="linear">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="23dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="5dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="28dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="23dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="5dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="28dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="23dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="5dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="28dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="23dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="5dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="28dp"
+                    app:cardBackgroundColor="@color/gray"
+                    app:cardCornerRadius="8dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</RelativeLayout>

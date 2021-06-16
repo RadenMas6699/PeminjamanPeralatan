@@ -69,6 +69,8 @@ public class AdminFragLabMesin extends Fragment {
         shimmer_frag = view.findViewById(R.id.shimmer_frag);
         shimmer_frag.startShimmer();
 
+        TextView tvEmptyState = view.findViewById(R.id.tvEmptyState);
+
         rv_lab_mesin.setHasFixedSize(true);
         rv_lab_mesin.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -146,7 +148,7 @@ public class AdminFragLabMesin extends Fragment {
         };
 
         SetEmptyState setEmptyState = new SetEmptyState();
-        setEmptyState.emptyState(reffLabMesin,shimmer_frag, lottieEmpty);
+        setEmptyState.emptyState(reffLabMesin, shimmer_frag, lottieEmpty, tvEmptyState);
 
         rv_lab_mesin.setAdapter(adapter);
 

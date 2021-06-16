@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.facebook.shimmer.ShimmerFrameLayout;
@@ -56,6 +57,9 @@ public class ListFragTool extends Fragment {
         rv_user_home_mesin.setLayoutManager(new LinearLayoutManager(getContext()));
         shimmer_frag = view.findViewById(R.id.shimmer_frag);
         shimmer_frag.startShimmer();
+
+        TextView tvEmptyState = view.findViewById(R.id.tvEmptyState);
+
         lottieEmpty = view.findViewById(R.id.lottieEmpty);
 
         getDataUser();
@@ -122,9 +126,11 @@ public class ListFragTool extends Fragment {
                 if (count == 0) {
                     shimmer_frag.setVisibility(View.INVISIBLE);
                     lottieEmpty.setVisibility(View.VISIBLE);
+                    tvEmptyState.setVisibility(View.VISIBLE);
                 } else {
                     shimmer_frag.setVisibility(View.INVISIBLE);
                     lottieEmpty.setVisibility(View.INVISIBLE);
+                    tvEmptyState.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -144,12 +150,12 @@ public class ListFragTool extends Fragment {
     private void getDataUser() {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         DatabaseReference dbuser = FirebaseDatabase.getInstance().getReference("User");
-        dbuser.child(auth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+        dbuser.child(auth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 user = (String) snapshot.child("name").getValue();
                 kelompok = (String) snapshot.child("kelompok").getValue();
-                userId = snapshot.child("id").getValue().toString();
+                userId = (String) snapshot.child("id").getValue();
                 img_profil = (String) snapshot.child("img_profil").getValue();
             }
 

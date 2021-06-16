@@ -38,8 +38,7 @@ import java.util.List;
 
 public class Login extends AppCompatActivity implements View.OnClickListener, OnSuccessListener<AuthResult>, OnFailureListener {
     private TextInputEditText etUsernameLogin, etPasswordLogin;
-//    private FirebaseAuth firebaseAuth;
-    private  FirebaseUser user;
+    private FirebaseUser user;
     private ProgressDialog progressDialog;
 
     private DatabaseReference databaseReferenceUid;
@@ -57,7 +56,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, On
         MaterialButton btnLogin = findViewById(R.id.btnLogin);
         LinearLayout llRegister = findViewById(R.id.llRegister);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
         if (user != null) {
 
@@ -107,7 +106,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener, On
                 break;
             case R.id.llRegister:
                 startActivity(new Intent(Login.this, Register.class));
-                finish();
                 break;
         }
     }

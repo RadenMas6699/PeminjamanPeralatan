@@ -4,6 +4,7 @@
     android:id="@+id/listItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
     android:paddingHorizontal="24dp"
     android:paddingTop="10dp">
 
@@ -72,6 +73,7 @@
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
             android:background="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackground"
             android:scaleType="fitXY"
             android:src="@drawable/ic_min_circle_line" />
 
@@ -91,6 +93,7 @@
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
             android:background="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackground"
             android:scaleType="fitXY"
             android:src="@drawable/ic_add_circle_line" />
     </LinearLayout>
@@ -102,6 +105,7 @@
         android:layout_alignTop="@id/tv_name"
         android:layout_alignBottom="@id/tv_lab"
         android:layout_alignParentEnd="true"
+        android:foreground="?attr/selectableItemBackground"
         android:paddingHorizontal="6dp"
         android:src="@drawable/ic_qr_scan_line" />
 

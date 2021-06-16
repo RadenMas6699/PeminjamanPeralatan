@@ -4,6 +4,7 @@
     android:id="@+id/listItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
     android:paddingStart="24dp"
     android:paddingTop="10dp"
     android:paddingEnd="24dp">
@@ -40,7 +41,9 @@
         android:layout_height="24dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:foreground="?attr/selectableItemBackground"
         android:paddingVertical="4dp"
+        android:visibility="invisible"
         app:tint="@android:color/darker_gray" />
 
     <View

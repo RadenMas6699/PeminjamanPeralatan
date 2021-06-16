@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.facebook.shimmer.ShimmerFrameLayout;
@@ -45,6 +46,8 @@ public class AdminDataPeminjam extends AppCompatActivity {
         shimmerDataPeminjam = findViewById(R.id.shimmer_data_peminjam);
         shimmerDataPeminjam.startShimmer();
 
+        TextView tvEmptyState = findViewById(R.id.tvEmptyState);
+
         rvDataPeminjam.setHasFixedSize(true);
         rvDataPeminjam.setLayoutManager(new LinearLayoutManager(AdminDataPeminjam.this));
 
@@ -73,7 +76,7 @@ public class AdminDataPeminjam extends AppCompatActivity {
         };
 
         SetEmptyState setEmptyState = new SetEmptyState();
-        setEmptyState.emptyState(dbPinjam, shimmerDataPeminjam, lottieEmpty);
+        setEmptyState.emptyState(dbPinjam, shimmerDataPeminjam, lottieEmpty, tvEmptyState);
 
 
         rvDataPeminjam.setAdapter(adapter);

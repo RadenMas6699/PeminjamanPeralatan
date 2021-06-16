@@ -31,7 +31,7 @@
     <string name="lab_instalasi">Instalasi</string>
     <string name="lab_instrumentasi">Instrumentasi</string>
     <string name="hai_user">Hai, Raden</string>
-    <string name="add">Tambah</string>
+    <string name="add">+ Tambah</string>
     <string name="profil">Profil</string>
     <string name="nim">NIM</string>
     <string name="email">Email</string>
@@ -61,6 +61,8 @@
     <string name="profil_developer">Profil Pembuat</string>
     <string name="tambah_asisten_lab">Tambah Asisten Lab</string>
     <string name="pengembalian">Pengembalian</string>
+    <string name="data_kosong">Data kosong</string>
+    <string name="tambah">Tambah</string>
 
 
 </resources>

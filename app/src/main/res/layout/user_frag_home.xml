@@ -46,8 +46,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:layout_toStartOf="@id/img_user"
         android:lines="1"
         android:textColor="@color/white_smoke"
@@ -164,6 +164,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:button="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/lab_mesin"
             android:textStyle="bold" />
@@ -173,6 +174,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:button="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/lab_instalasi"
             android:textStyle="bold" />
@@ -182,6 +184,7 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:button="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/lab_instrumentasi"
             android:textStyle="bold" />

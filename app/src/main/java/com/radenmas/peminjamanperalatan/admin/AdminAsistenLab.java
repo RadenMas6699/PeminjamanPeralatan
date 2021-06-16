@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -73,6 +74,8 @@ public class AdminAsistenLab extends AppCompatActivity implements View.OnClickLi
         shimmerAsisten = findViewById(R.id.shimmer_asisten_lab);
         shimmerAsisten.startShimmer();
 
+        TextView tvEmptyState = findViewById(R.id.tvEmptyState);
+
         reffAsisten = FirebaseDatabase.getInstance().getReference("Admin");
         reffAsisten.keepSynced(true);
 
@@ -99,7 +102,7 @@ public class AdminAsistenLab extends AppCompatActivity implements View.OnClickLi
         };
 
         SetEmptyState setEmptyState = new SetEmptyState();
-        setEmptyState.emptyState(reffAsisten, shimmerAsisten, lottieEmpty);
+        setEmptyState.emptyState(reffAsisten, shimmerAsisten, lottieEmpty, tvEmptyState);
 
         adapter.notifyDataSetChanged();
 

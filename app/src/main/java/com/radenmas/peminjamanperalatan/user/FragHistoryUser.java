@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -29,6 +30,7 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.radenmas.peminjamanperalatan.FirebaseViewHolder;
 import com.radenmas.peminjamanperalatan.R;
+import com.radenmas.peminjamanperalatan.SetEmptyState;
 import com.radenmas.peminjamanperalatan.adapter.DataRecycler;
 
 import org.jetbrains.annotations.NotNull;
@@ -61,6 +63,8 @@ public class FragHistoryUser extends Fragment {
         shimmerHistory = view.findViewById(R.id.shimmer_history);
         shimmerHistory.startShimmer();
         lottieEmpty = view.findViewById(R.id.lottieEmpty);
+
+        TextView tvEmptyState = view.findViewById(R.id.tvEmptyState);
 
         RecyclerView rv_list_history = view.findViewById(R.id.rv_list_history);
         rv_list_history.setHasFixedSize(true);
@@ -154,7 +158,6 @@ public class FragHistoryUser extends Fragment {
             }
         };
 
-
         adapter.notifyDataSetChanged();
 
         reference.addValueEventListener(new ValueEventListener() {
@@ -162,8 +165,18 @@ public class FragHistoryUser extends Fragment {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 int count = (int) snapshot.getChildrenCount();
                 if (count == 0) {
-                    lottieEmpty.setVisibility(View.VISIBLE);
                     shimmerHistory.setVisibility(View.INVISIBLE);
+                    lottieEmpty.setVisibility(View.VISIBLE);
+                    tvEmptyState.setVisibility(View.VISIBLE);
+
+                    FirebaseAuth auth = FirebaseAuth.getInstance();
+                    String uidUser = auth.getCurrentUser().getUid();
+                    DatabaseReference listPinjam = FirebaseDatabase.getInstance().getReference("ListPinjam").child(uidUser);
+                    listPinjam.removeValue();
+                } else {
+                    shimmerHistory.setVisibility(View.INVISIBLE);
+                    lottieEmpty.setVisibility(View.INVISIBLE);
+                    tvEmptyState.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -175,7 +188,6 @@ public class FragHistoryUser extends Fragment {
 
         rv_list_history.setAdapter(adapter);
 
-
         qrScanIntegrator = IntentIntegrator.forSupportFragment(this);
         qrScanIntegrator.setPrompt("Arahkan kamera ke QR Code");
         qrScanIntegrator.setBeepEnabled(true);
@@ -184,7 +196,6 @@ public class FragHistoryUser extends Fragment {
         qrScanIntegrator.setBarcodeImageEnabled(true);
         qrScanIntegrator.setOrientationLocked(true);
         qrScanIntegrator.setCaptureActivity(Capture.class);
-
 
         return view;
     }
@@ -214,9 +225,9 @@ public class FragHistoryUser extends Fragment {
             updateData.put("jml_tool", updateStock);
             referenceLab.updateChildren(updateData);
 
-        }else {
-            if (!dataQr.equals("null")){
-                Snackbar.make(getView(), "QR Code tidak sesuai",Snackbar.LENGTH_SHORT).show();
+        } else {
+            if (!dataQr.equals("null")) {
+                Snackbar.make(getView(), "QR Code tidak sesuai", Snackbar.LENGTH_SHORT).show();
             }
         }
     }

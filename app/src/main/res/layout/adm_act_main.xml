@@ -28,6 +28,7 @@
                 android:layout_height="56dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="6dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:onClick="Account"
                 android:src="@drawable/ic_user_circle_white" />
 
@@ -36,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:foreground="?attr/selectableItemBackground"
                 android:onClick="AboutApp"
                 android:src="@drawable/ic_information_line"
                 app:tint="@color/white_smoke" />
@@ -138,12 +140,13 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_asisten_lab"
                     android:layout_width="match_parent"
-                    android:visibility="gone"
                     android:layout_height="140dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="AsistenLab"
+                    android:visibility="gone"
                     app:cardCornerRadius="8dp">
 
                     <ImageView
@@ -192,6 +195,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="KelasMhs"
                     app:cardCornerRadius="8dp">
 
@@ -242,6 +246,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
                     android:background="@color/blue_700"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="BioMhs"
                     app:cardCornerRadius="8dp">
 
@@ -291,6 +296,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="Lab"
                     app:cardCornerRadius="8dp">
 
@@ -342,6 +348,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="DataPinjam"
                     app:cardCornerRadius="16dp">
 

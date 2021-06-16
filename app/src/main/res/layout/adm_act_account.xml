@@ -20,6 +20,7 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentStart="true"
+                android:foreground="?attr/selectableItemBackground"
                 android:onClick="Back"
                 android:src="@drawable/ic_arrow_back"
                 app:tint="@color/white_smoke" />
@@ -57,6 +58,7 @@
             android:layout_alignEnd="@id/img_admin"
             android:layout_alignBottom="@id/img_admin"
             android:background="@drawable/bg_corner_36"
+            android:foreground="?attr/selectableItemBackground"
             android:padding="8dp"
             android:src="@drawable/ic_camera"
             app:tint="@color/white" />
@@ -148,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="48dp"
                     android:layout_marginTop="24dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
             </RelativeLayout>
 
             <com.google.android.material.button.MaterialButton

@@ -39,7 +39,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
     private MaterialAutoCompleteTextView etClassRegister, etKelompokRegister;
     private ProgressDialog progressDialog;
 
-    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth auth;
+    private FirebaseUser firebaseUser;
 
     private ArrayAdapter<String> adapter;
     private ArrayList<String> listKelas;
@@ -50,7 +51,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
     private String phone;
     private String kelompok;
     private String user;
+    private String pass;
     private final Handler handler = new Handler();
+    private final Handler handler1 = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +71,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
         MaterialButton btnRegister = findViewById(R.id.btnRegister);
         TextView tvLogin = findViewById(R.id.tvLogin);
 
-        firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        auth = FirebaseAuth.getInstance();
+        firebaseUser = auth.getCurrentUser();
 
         getDataKelas();
 
@@ -111,8 +114,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
                 register();
                 break;
             case R.id.tvLogin:
-                startActivity(new Intent(Register.this, Login.class));
-                finish();
+                onBackPressed();
                 break;
         }
     }
@@ -125,7 +127,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
         kelompok = etKelompokRegister.getText().toString().trim();
         phone = etPhoneRegister.getText().toString().trim();
         user = etUsernameRegister.getText().toString().trim();
-        String pass = etPasswordRegister.getText().toString().trim();
+        pass = etPasswordRegister.getText().toString().trim();
 
         InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
@@ -161,7 +163,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
             progressDialog.setContentView(R.layout.progress_layout);
             progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
-            firebaseAuth.createUserWithEmailAndPassword(user, pass).addOnSuccessListener(this).addOnFailureListener(this);
+            auth.createUserWithEmailAndPassword(user, pass).addOnSuccessListener(this).addOnFailureListener(this);
         }
     }
 
@@ -171,10 +173,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
         progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        String id = firebaseUser.getUid();
+        String uid = firebaseUser.getUid();
 
-        DatabaseReference dbUser = FirebaseDatabase.getInstance().getReference("User").child(id);
-        DatabaseReference dbKelas = FirebaseDatabase.getInstance().getReference("" + kelas).child(id);
+        DatabaseReference dbUser = FirebaseDatabase.getInstance().getReference("User").child(uid);
+        DatabaseReference dbKelas = FirebaseDatabase.getInstance().getReference(kelas).child(uid);
 
         char preff = phone.charAt(0);
         String prefix;
@@ -189,16 +191,17 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
         userInfo.put("nama_kelas", kelas);
         userInfo.put("kelompok", kelompok);
         userInfo.put("email", user);
+        userInfo.put("password", pass);
         userInfo.put("img_profil", "-");
         userInfo.put("nim", nim);
         userInfo.put("phone", prefix);
-        userInfo.put("id", id);
+        userInfo.put("id", uid);
         userInfo.put("userId", "Mahasiswa");
 
         dbUser.setValue(userInfo);
 
         Map<String, Object> userKelas = new HashMap<>();
-        userKelas.put("id", id);
+        userKelas.put("id", uid);
         userKelas.put("name", name);
         userKelas.put("img_profil", "-");
         userKelas.put("nim", nim);
@@ -206,9 +209,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
 
         handler.postDelayed(() -> {
             progressDialog.dismiss();
-            startActivity(new Intent(Register.this, Login.class));
-            finish();
-        }, 2000);
+            handler1.postDelayed(this::onBackPressed, 500);
+        }, 500);
     }
 
     @Override

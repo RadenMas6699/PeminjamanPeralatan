@@ -1,6 +1,7 @@
 package com.radenmas.peminjamanperalatan;
 
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -18,7 +19,7 @@ public class SetEmptyState {
     public SetEmptyState() {
     }
 
-    public void emptyState(DatabaseReference reference, ShimmerFrameLayout shimmer, LottieAnimationView lottie) {
+    public void emptyState(DatabaseReference reference, ShimmerFrameLayout shimmer, LottieAnimationView lottie, TextView text) {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
@@ -26,9 +27,11 @@ public class SetEmptyState {
                 if (count == 0) {
                     shimmer.setVisibility(View.INVISIBLE);
                     lottie.setVisibility(View.VISIBLE);
+                    text.setVisibility(View.VISIBLE);
                 } else {
                     shimmer.setVisibility(View.INVISIBLE);
                     lottie.setVisibility(View.INVISIBLE);
+                    text.setVisibility(View.INVISIBLE);
                 }
             }
 

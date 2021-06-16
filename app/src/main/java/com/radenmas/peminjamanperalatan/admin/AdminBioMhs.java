@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.facebook.shimmer.ShimmerFrameLayout;
@@ -43,6 +44,8 @@ public class AdminBioMhs extends AppCompatActivity {
         shimmerDataMhs = findViewById(R.id.shimmer_data_mhs);
         shimmerDataMhs.startShimmer();
         LottieAnimationView lottieEmpty = findViewById(R.id.lottieEmpty);
+
+        TextView tvEmptyState = findViewById(R.id.tvEmptyState);
 
         DatabaseReference reffKelas = FirebaseDatabase.getInstance().getReference("Kelas");
         countKelas = FirebaseDatabase.getInstance().getReference();
@@ -90,7 +93,7 @@ public class AdminBioMhs extends AppCompatActivity {
         };
 
         SetEmptyState setEmptyState = new SetEmptyState();
-        setEmptyState.emptyState(reffKelas,shimmerDataMhs, lottieEmpty);
+        setEmptyState.emptyState(reffKelas, shimmerDataMhs, lottieEmpty, tvEmptyState);
 
         rvKlsMhs.setAdapter(adapter);
     }

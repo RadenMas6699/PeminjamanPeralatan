@@ -115,7 +115,7 @@ public class AdminMainActivity extends AppCompatActivity {
     private void getDataAdmin() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String id_user = user.getUid();
-        if (id_user.equals("9xKhriaJH7YDIbUmzSQU3dAPbpx2")) {
+        if (id_user.equals("i0hVD6xewwdMj561c9H2OIk0rq13")) {
             card_asisten_lab.setVisibility(View.VISIBLE);
         } else {
             card_asisten_lab.setVisibility(View.GONE);

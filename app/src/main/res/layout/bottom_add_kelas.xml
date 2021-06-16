@@ -67,7 +67,7 @@
             android:layout_marginBottom="12dp"
             android:backgroundTint="@color/blue_600"
             android:gravity="center"
-            android:text="Tambah"
+            android:text="@string/add"
             android:textAllCaps="false"
             app:cornerRadius="20dp" />
     </RelativeLayout>

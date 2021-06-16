@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -57,6 +58,8 @@ public class AdminKelas extends AppCompatActivity {
         shimmerKelas = findViewById(R.id.shimmer_kelas);
         shimmerKelas.startShimmer();
 
+        TextView tvEmptyState = findViewById(R.id.tvEmptyState);
+
         reffKelas = FirebaseDatabase.getInstance().getReference("Kelas");
         countKelas = FirebaseDatabase.getInstance().getReference();
         reffKelas.keepSynced(true);
@@ -88,7 +91,7 @@ public class AdminKelas extends AppCompatActivity {
 
                     }
                 });
-
+                firebaseViewHolder.popup.setVisibility(View.VISIBLE);
                 firebaseViewHolder.popup.setImageDrawable(getResources().getDrawable(R.drawable.ic_delete));
                 firebaseViewHolder.popup.setOnClickListener(view1 -> new AlertDialog.Builder(AdminKelas.this)
                         .setMessage("Hapus kelas " + dataRecycler.getNama_kelas())
@@ -138,7 +141,7 @@ public class AdminKelas extends AppCompatActivity {
         };
 
         SetEmptyState setEmptyState = new SetEmptyState();
-        setEmptyState.emptyState(reffKelas, shimmerKelas, lottieEmpty);
+        setEmptyState.emptyState(reffKelas, shimmerKelas, lottieEmpty, tvEmptyState);
 
         adapter.notifyDataSetChanged();
 

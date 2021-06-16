@@ -65,6 +65,8 @@ public class AdminFragLabInstrumentasi extends Fragment {
         shimmer_frag = view.findViewById(R.id.shimmer_frag);
         shimmer_frag.startShimmer();
 
+        TextView tvEmptyState = view.findViewById(R.id.tvEmptyState);
+
         reffLabInstrumentasi = FirebaseDatabase.getInstance().getReference(path);
         reffLabInstrumentasi.keepSynced(true);
 
@@ -144,7 +146,7 @@ public class AdminFragLabInstrumentasi extends Fragment {
         };
 
         SetEmptyState setEmptyState = new SetEmptyState();
-        setEmptyState.emptyState(reffLabInstrumentasi,shimmer_frag, lottieEmpty);
+        setEmptyState.emptyState(reffLabInstrumentasi, shimmer_frag, lottieEmpty, tvEmptyState);
 
         rv_lab_instrumentasi.setAdapter(adapter);
 

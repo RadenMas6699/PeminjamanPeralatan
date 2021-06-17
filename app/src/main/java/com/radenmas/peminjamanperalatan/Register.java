@@ -35,8 +35,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Register extends AppCompatActivity implements View.OnClickListener, OnSuccessListener<AuthResult>, OnFailureListener {
-    private TextInputEditText etFullnameRegister, etNimRegister, etPhoneRegister, etUsernameRegister, etPasswordRegister;
-    private MaterialAutoCompleteTextView etClassRegister, etKelompokRegister;
+    private TextInputEditText etFullnameRegister, etNimRegister, etKelompokRegister, etPhoneRegister, etUsernameRegister, etPasswordRegister;
+    private MaterialAutoCompleteTextView etClassRegister;
     private ProgressDialog progressDialog;
 
     private FirebaseAuth auth;
@@ -129,34 +129,40 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
         user = etUsernameRegister.getText().toString().trim();
         pass = etPasswordRegister.getText().toString().trim();
 
-        InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        manager.hideSoftInputFromWindow(etFullnameRegister.getApplicationWindowToken(), 0);
-        manager.hideSoftInputFromWindow(etNimRegister.getApplicationWindowToken(), 0);
-        manager.hideSoftInputFromWindow(etClassRegister.getApplicationWindowToken(), 0);
-        manager.hideSoftInputFromWindow(etKelompokRegister.getApplicationWindowToken(), 0);
-        manager.hideSoftInputFromWindow(etPhoneRegister.getApplicationWindowToken(), 0);
-        manager.hideSoftInputFromWindow(etUsernameRegister.getApplicationWindowToken(), 0);
-        manager.hideSoftInputFromWindow(etPasswordRegister.getApplicationWindowToken(), 0);
-
-
         if (name.isEmpty()) {
             etFullnameRegister.setError("Nama kosong");
+            etFullnameRegister.requestFocus();
         } else if (nim.isEmpty()) {
             etNimRegister.setError("NIM kosong");
+            etNimRegister.requestFocus();
         } else if (kelas.isEmpty()) {
             etClassRegister.setError("Kelas kosong");
+            etClassRegister.requestFocus();
         } else if (kelompok.isEmpty()) {
             etKelompokRegister.setError("Kelompok kosong");
+            etKelompokRegister.requestFocus();
         } else if (phone.isEmpty()) {
             etPhoneRegister.setError("No Hp kosong");
+            etPhoneRegister.requestFocus();
         } else if (user.isEmpty()) {
             etUsernameRegister.setError("Username kosong");
+            etUsernameRegister.requestFocus();
         } else if (!Patterns.EMAIL_ADDRESS.matcher(user).matches()) {
             etUsernameRegister.setError("Username tidak valid");
+            etUsernameRegister.requestFocus();
         } else if (pass.isEmpty()) {
             etPasswordRegister.setError("Password kosong");
+            etPasswordRegister.requestFocus();
         } else {
+            InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            manager.hideSoftInputFromWindow(etFullnameRegister.getApplicationWindowToken(), 0);
+            manager.hideSoftInputFromWindow(etNimRegister.getApplicationWindowToken(), 0);
+            manager.hideSoftInputFromWindow(etClassRegister.getApplicationWindowToken(), 0);
+            manager.hideSoftInputFromWindow(etKelompokRegister.getApplicationWindowToken(), 0);
+            manager.hideSoftInputFromWindow(etPhoneRegister.getApplicationWindowToken(), 0);
+            manager.hideSoftInputFromWindow(etUsernameRegister.getApplicationWindowToken(), 0);
+            manager.hideSoftInputFromWindow(etPasswordRegister.getApplicationWindowToken(), 0);
+
             //register
             progressDialog = new ProgressDialog(Register.this);
             progressDialog.show();
@@ -189,7 +195,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
         Map<String, Object> userInfo = new HashMap<>();
         userInfo.put("name", name);
         userInfo.put("nama_kelas", kelas);
-        userInfo.put("kelompok", kelompok);
+        userInfo.put("kelompok", "Kelompok " + kelompok);
         userInfo.put("email", user);
         userInfo.put("password", pass);
         userInfo.put("img_profil", "-");

@@ -103,16 +103,18 @@
                 android:layout_marginTop="8dp"
                 app:endIconDrawable="@drawable/ic_clear"
                 app:endIconMode="clear_text"
+                app:prefixText="@string/kelompok"
+                app:prefixTextColor="@color/black"
                 app:startIconDrawable="@drawable/ic_team_fill"
                 app:startIconTint="@color/blue_600">
 
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etKelompokRegister"
                     style="@style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Ex: Kelompok 1"
-                    android:inputType="textAutoComplete"
+                    android:hint="@string/kelompok"
+                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/semi_black"
                     android:textSize="16sp" />
@@ -192,7 +194,9 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/bg_round_top"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="16dp">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegister"
@@ -207,8 +211,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:orientation="horizontal">
 

@@ -114,22 +114,25 @@ public class Login extends AppCompatActivity implements View.OnClickListener, On
         String user = etUsernameLogin.getText().toString();
         String pass = etPasswordLogin.getText().toString();
 
-        InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        manager.hideSoftInputFromWindow(etUsernameLogin.getApplicationWindowToken(), 0);
-        manager.hideSoftInputFromWindow(etPasswordLogin.getApplicationWindowToken(), 0);
-
         etUsernameLogin.clearFocus();
         etPasswordLogin.clearFocus();
 
         if (user.isEmpty()) {
             etUsernameLogin.setError("Username kosong");
+            etUsernameLogin.requestFocus();
         } else if (!Patterns.EMAIL_ADDRESS.matcher(user).matches()) {
             etUsernameLogin.setError("Username tidak valid");
+            etUsernameLogin.requestFocus();
         } else if (pass.isEmpty()) {
             etPasswordLogin.setError("Password kosong");
+            etPasswordLogin.requestFocus();
         } else if (userId == null) {
             Toast.makeText(this, "Pilih tipe user", Toast.LENGTH_SHORT).show();
         } else {
+            InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            manager.hideSoftInputFromWindow(etUsernameLogin.getApplicationWindowToken(), 0);
+            manager.hideSoftInputFromWindow(etPasswordLogin.getApplicationWindowToken(), 0);
+
             //login
             progressDialog = new ProgressDialog(Login.this);
             progressDialog.show();

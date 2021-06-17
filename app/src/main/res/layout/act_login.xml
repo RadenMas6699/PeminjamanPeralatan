@@ -8,31 +8,40 @@
     android:orientation="vertical"
     tools:context=".Login">
 
-    <ImageView
-        android:id="@+id/ic_app_login"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/ic_app" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ic_app_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center_vertical"
-        android:lines="2"
-        android:text="@string/hello_app"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:layout_above="@id/scrollLogin"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ic_app_login"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_app" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ic_app_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:text="@string/hello_app"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/scrollLogin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <LinearLayout
             android:id="@+id/linearLogin"
@@ -51,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/login"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -84,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 app:passwordToggleEnabled="true"
                 app:startIconDrawable="@drawable/ic_lock_fill"
@@ -123,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="16dp"
                 android:minHeight="56dp"
                 android:text="@string/login"
                 android:textAllCaps="false"
@@ -134,7 +143,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 

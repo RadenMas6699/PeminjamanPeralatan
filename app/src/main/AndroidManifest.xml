@@ -20,7 +20,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PeminjamanPeralatan">
-        <activity android:name=".AdminRegistrasi" />
         <activity android:name=".admin.AdminAsistenLab" />
         <activity android:name=".admin.AdminPreviewDataMhs" />
         <activity android:name=".admin.AdminAccount" />
@@ -29,7 +28,7 @@
         <activity android:name=".admin.AdminKelas" />
         <activity
             android:name=".user.Capture"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:stateNotNeeded="true"
             android:theme="@style/zxing_CaptureTheme" />
         <activity android:name=".About" />
